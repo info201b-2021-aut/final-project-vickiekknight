@@ -18,7 +18,7 @@ This is where you will create your Github repo for your final project. Instructi
 **Finding Data**
 
 - Where did we download the data?
-  -We found the Animal Crossing: New Horizons game data on [Kaggle](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset) 
+  -We found the Animal Crossing: New Horizons game data on [Kaggle](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset).
 - How was the data collected or generated? (Who collected the data, and who or what the data is about?)
 - How many observations (rows) are in our data?
 - How many features (columns) are in our data?
