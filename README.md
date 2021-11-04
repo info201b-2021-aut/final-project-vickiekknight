@@ -2,7 +2,7 @@
 
 This is where you will create your Github repo for your final project. Instructions are on Canvas!
 
-##**Domain of Interest**
+## **Domain of Interest**
 
 - Why are we interested in this field/domain?
   - We are interested in the game Animal Crossing: New Horizons because besides its enjoyable nature, its recent surge in popularity could provide intriguing trends when categorizing elements within the game.
@@ -15,7 +15,7 @@ This is where you will create your Github repo for your final project. Instructi
   - How many flying bugs can appear in any weather except rain compared to any weather?
   - How many villager species are cats?
 
-**Finding Data**
+## **Finding Data**
 
 - Where did we download the data?
   - We found the **Animal Crossing: New Horizons** game data on [**Kaggle**](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset).
