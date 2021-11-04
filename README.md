@@ -1,4 +1,4 @@
-# final-project-starter
+# final-project-Animal_Crossing:New_Horizons
 
 This is where you will create your Github repo for your final project. Instructions are on Canvas!
 
