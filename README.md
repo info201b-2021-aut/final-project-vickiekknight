@@ -2,7 +2,7 @@
 
 This is where you will create your Github repo for your final project. Instructions are on Canvas!
 
-**Domain of Interest**
+##**Domain of Interest**
 
 - Why are we interested in this field/domain?
   - We are interested in the game Animal Crossing: New Horizons because besides its enjoyable nature, its recent surge in popularity could provide intriguing trends when categorizing elements within the game.
@@ -18,7 +18,7 @@ This is where you will create your Github repo for your final project. Instructi
 **Finding Data**
 
 - Where did we download the data?
-  - We found the Animal Crossing: New Horizons game data on [Kaggle](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset).
+  - We found the **Animal Crossing: New Horizons** game data on [**Kaggle**](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset).
 - How was the data collected or generated? (Who collected the data, and who or what the data is about?)
   - The data was "collected by a dedicated group of Animal Crossing fans," that created these spreadsheets for public use. The data is about various different elements within the game and their functions and features.
 - How many observations (rows) are in our data?
