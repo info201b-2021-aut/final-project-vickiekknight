@@ -5,7 +5,7 @@ This is where you will create your Github repo for your final project. Instructi
 ## **Domain of Interest**
 
 - Why are we interested in this field/domain?
-  - We are interested in the game Animal Crossing: New Horizons because besides its enjoyable nature, its recent surge in popularity could provide intriguing trends when categorizing elements within the game.
+  - We are interested in the game **Animal Crossing: New Horizons** because besides its enjoyable nature, its recent surge in popularity could provide intriguing trends when categorizing elements within the game.
 - What other examples (at least 3) of data driven project have you found related to this domain?
   - Animal Crossing Reviews
   - Video Games Sales
