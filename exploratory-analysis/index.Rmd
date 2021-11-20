@@ -1,13 +1,14 @@
- - Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
- - Write a summary paragraph that includes information calculated by your
+
+ * Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
+ * Write a summary paragraph that includes information calculated by your
  summary information function
  
- <p>In the villagers dataset, I created five different values that summarized information I deemed important. I chose to find the number of different personality traits that exist in the Animal Crossing game because it would be useful to know what kinds of personality a player can expect from villagers and how to handle that when playing the game. The total number of villagers is another important piece of information because it is useful to know how many villagers are possible for a player can encounter playing the game. Last but not least, he most common favorite song and the least common hobby villagers have are some other key characteristics of villagers that can become helpful when determining the type of villager and the best way to deal with them.</p>
+In the villagers dataset, I created five different values that summarized information I deemed important. I chose to find the number of different personality traits that exist in the Animal Crossing game because it would be useful to know what kinds of personality a player can expect from villagers and how to handle that when playing the game. The total number of villagers is another important piece of information because it is useful to know how many villagers are possible for a player can encounter playing the game. Last but not least, he most common favorite song and the least common hobby villagers have are some other key characteristics of villagers that can become helpful when determining the type of villager and the best way to deal with them.
  
- - Render your table and describe pertinent observations found in it
- - Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
-- The first Chart is about the 
+ * Render your table and describe pertinent observations found in it
+ * Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+* The first Chart is about the 
 
-- The second chart is about the insects price polulation density histogram chart. This chart shows us what is the common sell price for most of the insects. 
+* The second chart is about the insects price population density histogram chart. This chart shows us what is the common sell price for most of the insects. 
 
-- The third chart is about the villagers personailty count bar chart. This char shows us the polulation of the each personality. 
+* The third chart is about the villagers personality count bar chart. This char shows us the population of the each personality. 
