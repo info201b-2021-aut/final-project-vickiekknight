@@ -1,5 +1,7 @@
 library(ggplot2)
-
+library(readxl)
+library(tidyverse)
+library(dplyr)
 
 Insects <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/insects.csv?token=AV5GB6PTJDSSBO4XXHQCXSDBUG3PG", encoding = "UTF-8")
 
