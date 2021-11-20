@@ -1,7 +1,7 @@
 
  * Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
  
- Animal Crossing: New Horizons is a game people can play on Nintendo switch consoles. Its recent surge in popularity could provide intriguing trends when categorizing elements within the game. We have chosen to explore the data within villagers, insects, and fish within the game and discover the trends that can be found within these datasets.
+Animal Crossing: New Horizons is a game people can play on Nintendo switch consoles. Its recent surge in popularity could provide intriguing trends when categorizing elements within the game. We have chosen to explore the data within villagers, insects, and fish within the game and discover the trends that can be found within these datasets.
  
  * Write a summary paragraph that includes information calculated by your
  summary information function
@@ -81,7 +81,7 @@ pondFish / PriceAll
 riverFish / PriceAll
 seaFish / PriceAll
 
-pie(riverFisPriceAllpie(riverFish, pondFish, seaFish)
+pie(riverFisPriceAllpie(riverFish, pondFish, seaFish))
 
 prices <- c(48840, 137860, 232900)
 lbls <- c("Pond Fish", "River Fish", "Sea Fish")
@@ -93,7 +93,7 @@ pie(prices,labels = lbls,
     main="Chart of Fish Price Diversification")
 ```
 
-The first Chart is about the 
+The first Chart is about comparing the prices of different types of fish. 
 
 
 ```{r echo=FALSE}
