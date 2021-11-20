@@ -6,3 +6,8 @@
  
  - Render your table and describe pertinent observations found in it
  - Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+- The first Chart is about the 
+
+- The second chart is about the insects price polulation density histogram chart. This chart shows us what is the common sell price for most of the insects. 
+
+- The third chart is about the villagers personailty count bar chart. This char shows us the polulation of the each personality. 
