@@ -11,7 +11,7 @@ This is where you will create your Github repo for your final project. Instructi
   - Video Games Sales
   - Pokemon with Stats
 - What data-driven questions (at least 3) do you hope to answer about this domain?
-  - How many fishes are from the sea?
+  - How can in the Animal Crossing economics model apply to real life investment choices?
   - How many flying bugs can appear in any weather except rain compared to any weather?
   - How many villager species are cats?
 
