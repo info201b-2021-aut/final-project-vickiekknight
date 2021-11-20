@@ -1,6 +1,8 @@
 
  * Write an introductory paragraph explaining the domain/data set (feel free to borrow from the project proposal)
  
+ Animal Crossing: New Horizons is a game people can play on Nintendo switch consoles. Its recent surge in popularity could provide intriguing trends when categorizing elements within the game. We have chosen to explore the data within villagers, insects, and fish within the game and discover the trends that can be found within these datasets.
+ 
  * Write a summary paragraph that includes information calculated by your
  summary information function
  
