@@ -44,7 +44,11 @@ Takeaways <- tabPanel(
       
       tags$section(
         tags$h1("What we have learned from the cabbage trading in this game"),
-        tags$p("Main sentnce")
+        tags$p("The pattern of the cabbage selling have helped us figure out what the lowest possible rate
+                that the Nook shop will buy from us is. We defined our base price as 100 Bells. Now we follow
+                the steps. When following, keep the formula below in mind. Note that percentages are defined 
+                as a decimal between 0.0 and 1.0. So 85% would be 0.85. ")
+        tags$h1("sell price = base rate * base price")
       )
     )
   )
