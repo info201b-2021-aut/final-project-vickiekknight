@@ -6,12 +6,12 @@ library(plotly)
 ################################################################################################
 Intro <- tabPanel(
   
-  tags$h3(id = "tabs", "Introducation"),
+  tags$h3(id = "tabs", "Introduction"),
   
   tags$body(
     
     tags$header(
-      tags$h1(id = "header", "What we are trying to find in this dataset."),
+      tags$h1(id = "header", "Animal Crossing: Analysis of in-game resourses and Stalk Market."),
     ),
     
     tags$hr(),
@@ -26,8 +26,11 @@ Intro <- tabPanel(
       ),
       
       tags$section(
-        tags$p("In the process of constructing the data tables and information about the game animal crossing, one of the dilemmas I have found is based on the in-game item 'turnip' In Animal Crossing: New Horizons, turnips are sold by an NPC(non-playable character) called Daisy-Mae. These vegetables aren't for growing, though, as they're the game's version of a stock market of sorts - aka the stalk market. On Sundays, you buy turnips for one price, and then you 
+        tags$p("In the process of constructing the data tables and information about the game animal crossing, one of the dilemmas we have found is based on the in-game item 'turnip' In Animal Crossing: New Horizons, turnips are sold by an NPC(non-playable character) called Daisy-Mae. These vegetables aren't for growing, though, as they're the game's version of a stock market of sorts - aka the stalk market. On Sundays, you buy turnips for one price, and then you 
                aim to sell them before the next Sunday rolls around - hopefully for a higher price than you paid for them. Each day, the shop will offer two different prices for your turnips. The game is to take a gamble on what you think will be the highest price each week and where you can make the most profit. "),
+        tags$hr()
+        tags$p("But in the un-beautiful real world, stock prices are determined by market supply and demand, and it is common to lose money to nothing or make hundreds of thousands of money in a minute. If we can analyze how players in the game should know when to sell turnips to stop losing money/or sell it to make a profit, it would help people stop making the future costs become the suck cost, further preventing the money lost.
+        "),
         tags$hr()
       ),
     )
