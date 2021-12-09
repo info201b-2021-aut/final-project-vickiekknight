@@ -23,7 +23,7 @@ Takeaways <- tabPanel(
   tags$body(
     
     tags$header(
-      tags$h1(id = "header", "Three Takeaways"),
+      tags$h2(id = "header", "Three Takeaways"),
     ),
     
     tags$hr(),
@@ -31,17 +31,19 @@ Takeaways <- tabPanel(
     tags$main(
       
       tags$section(
-        tags$h1("Subtitle"),
+        tags$h1("Insects"),
+        tags$p("According to what we have found out there, we have got the trend of what kind 
+                of insects are drawn to different places. Other players can use this information
+                to learn and find out the best location to catch their favorites insects in the areas. ")
+      ),
+      
+      tags$section(
+        tags$h1("Fishs"),
         tags$p("Main sentence")
       ),
       
       tags$section(
-        tags$h1("Subtitle"),
-        tags$p("Main sentence")
-      ),
-      
-      tags$section(
-        tags$h1("Subtitle"),
+        tags$h1("Villagers"),
         tags$p("Main sentnce")
       )
     )
