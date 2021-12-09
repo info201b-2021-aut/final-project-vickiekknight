@@ -64,7 +64,6 @@ Takeaways <- tabPanel(
         tags$h4("                      Sell price = base rate * base price"),
         tags$hr()
       )
-      img(src = "animal-crossing-new-horizons-8-3.jpg")
     )
   )
 )
