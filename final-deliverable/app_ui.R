@@ -5,7 +5,33 @@ library(plotly)
 
 ################################################################################################
 Intro <- tabPanel(
-  tags$h3(id = "tabs", "example"),
+  
+  tags$h3(id = "tabs", "Introducation"),
+  
+  tags$body(
+    
+    tags$header(
+      tags$h1(id = "header", "What we are trying to find in this dataset."),
+    ),
+    
+    tags$hr(),
+    
+    tags$main(
+      
+      tags$section(
+        tags$p("When our group was asked to find a data set to analyze for this project, we went on to research various data sets and settled for a game to investigate, the game Animal Crossing: New Horizons. The aspects of the game impressed us. From the early stages of the game, when players try to open up a deserted island, then slowly develop and complete the facilities one by one, as more residents move in, the atmosphere of the island becomes more lively. 
+              Besides its enjoyable nature, its recent surge in popularity could provide intriguing trends when categorizing elements within the game. What we were trying to achieve was to analyze data that most college students could easily understand. If a player wants to progress in the game, they would have to collect resources(animals, plants), explore islands, trading with villagers(Non-Playable-Character), etc. Upon diving more profoundly, we decided on three resources for analyzing: essential characteristics(such as location/spawn rate/total catches, etc.) of Fish, insects, and the personal information of the villagers.
+              "),
+        tags$hr()
+      ),
+      
+      tags$section(
+        tags$p("In the process of constructing the data tables and information about the game animal crossing, one of the dilemmas I have found is based on the in-game item 'turnip' In Animal Crossing: New Horizons, turnips are sold by an NPC(non-playable character) called Daisy-Mae. These vegetables aren't for growing, though, as they're the game's version of a stock market of sorts - aka the stalk market. On Sundays, you buy turnips for one price, and then you 
+               aim to sell them before the next Sunday rolls around - hopefully for a higher price than you paid for them. Each day, the shop will offer two different prices for your turnips. The game is to take a gamble on what you think will be the highest price each week and where you can make the most profit. "),
+        tags$hr()
+      ),
+    )
+  )
 )
 
 
