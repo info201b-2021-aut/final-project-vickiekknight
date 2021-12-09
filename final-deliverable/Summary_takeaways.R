@@ -8,13 +8,21 @@ library(plotly)
 read.csv("https://github.com/info201b-2021-aut/final-project-vickiekknight/blob/main/data/fish.csv")
 
 ###########
-introduction <- tabPanel()
+Intro <- tabPanel(
+  tags$h3(id = "tabs", "example"),
+)
 
-interactive_one <- tabPanel()
+interactive_one <- tabPanel(
+  tags$h3(id = "tabs", "example2"),
+)
 
-interactive_two <- tabPanel()
+interactive_two <- tabPanel(
+  tags$h3(id = "tabs", "example3"),
+)
 
-interactive_three <- tabPanel()
+interactive_three <- tabPanel(
+  tags$h3(id = "tabs", "example4"),
+)
 
 Takeaways <- tabPanel(
   
@@ -49,19 +57,27 @@ Takeaways <- tabPanel(
         tags$p("The pattern of the cabbage selling have helped us figure out what the lowest possible rate
                 that the Nook shop will buy from us is. We defined our base price as 100 Bells. Now we follow
                 the steps. When following, keep the formula below in mind. Note that percentages are defined 
-                as a decimal between 0.0 and 1.0. So 85% would be 0.85. ")
-        tags$h1("sell price = base rate * base price")
+                as a decimal between 0.0 and 1.0. So 85% would be 0.85. "),
+        tags$h1("Sell price = base rate * base price")
       )
     )
   )
 )
 
-###########
 ui <- navbarPage(
-    title = NULL,
-    introduction,
-    interactive_one,
-    interactive_two,
-    interactive_three,
-    Takeaways
-  )
+  title = NULL,
+  Intro, 
+  interactive_one,
+  interactive_two,
+  interactive_three,
+  Takeaways
+)
+
+
+
+
+###########
+server <- function(input, output){
+}
+
+shinyApp(ui = ui, server = server)
