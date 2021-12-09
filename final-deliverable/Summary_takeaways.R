@@ -39,7 +39,9 @@ Takeaways <- tabPanel(
       
       tags$section(
         tags$h1("Where is the best location to find the most valuable fish in the animal crossing?"),
-        tags$p("Main sentence")
+        tags$p("By looking at the trend that we have put into the interactive pages. We have know that the
+              (fish) has the most valuable to catach in this game. It can make the player to have the most 
+              benfits in this game.")
       ),
       
       tags$section(
