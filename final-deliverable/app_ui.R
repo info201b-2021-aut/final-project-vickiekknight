@@ -10,6 +10,9 @@ Intro <- tabPanel(
   
   tags$body(
     
+    img("", src = "https://image-cdn.essentiallysports.com/wp-content/uploads/animal-crossing-new-horizons-8-3.jpg", 
+      width = 800),
+    
     tags$header(
       tags$h1(id = "header", "Animal Crossing: Analysis of in-game resourses"),
       tags$h2(id = "header", "and in game stock market - The Stalk Market"),
