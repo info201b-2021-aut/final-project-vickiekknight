@@ -3,6 +3,8 @@ library(dplyr)
 library(ggplot2)
 library(plotly)
 library(stringr)
+library(shinyjs)
+library(dplyr)
 
 
 
@@ -178,6 +180,20 @@ dev.off()
 
 
 ###Graph
+server <- function(input, output) {
+  
+    plottest <- reactive({
+      if ("random" %in% input$pattern) return(random_plot)
+      if ("large_spike" %in% input$pattern) return(large_spike_plot)
+      if ("decreasing" %in% input$pattern) return(decreasing_plot)
+      if ("small_spike" %in% input$pattern) return(small_spike_plot)
+    })
+    
+    output$turnipPlot <- renderPlotly({
+        dataplots = plottest()
+        print(dataplots)
+    })
+}
 
 
 ##Graph
