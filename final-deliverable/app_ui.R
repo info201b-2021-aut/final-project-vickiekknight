@@ -54,6 +54,21 @@ interactive_one <- tabPanel(
 ################
 interactive_two <- tabPanel(
   tags$h3(id = "tabs", "example3"),
+  ui = fluidPage(
+    
+    #App name
+    titlePanel("Charting Size of Fish Based on Location"),
+    
+    useShinyjs(),
+    
+    selectInput("fish", "Fish Based on Location:",
+                choices = list("River_Fish", "Pier_Fish", "Cliff_Fish",
+                               "Mouth_Fish", "Pond_Fish", "Sea_Fish"),
+                
+                plotlyOutput("fishPlot")
+                
+    ),
+  )
 )
 
 ################
