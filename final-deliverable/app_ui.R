@@ -59,6 +59,21 @@ interactive_two <- tabPanel(
 ################
 interactive_three <- tabPanel(
   tags$h3(id = "tabs", "example4"),
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Turnip Price Trends in the Stock Market"),
+
+    # Sidebar with a slider input for type of pattern  
+    useShinyjs(),
+    selectizeInput("pattern", "type of pattern:",
+                   choices = list("random",
+                                  "large_spike",
+                                  "decreasing",
+                                  "small_spike")),
+    plotlyOutput("turnipPlot")
+        
+    )
 )
 
 ################
