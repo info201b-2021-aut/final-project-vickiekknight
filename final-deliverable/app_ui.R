@@ -58,7 +58,7 @@ interactive_one <- tabPanel(
 ################
 interactive_two <- tabPanel(
   tags$h3(id = "tabs", "example3"),
-  ui = fluidPage(
+  ui <- fluidPage(
     
     #App name
     titlePanel("Charting Size of Fish Based on Location"),
