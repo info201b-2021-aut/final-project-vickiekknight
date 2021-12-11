@@ -14,6 +14,7 @@ library(dplyr)
 ##########################Graph 2(Fish)
 
 fishdata <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/fish.csv", encoding = "UTF-8")
+villagerData <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/villagers.csv")
 
 #Create new DF
 main_data <- fishdata %>%
@@ -254,3 +255,37 @@ server <- function(input, output) {
     print(dataplots)
   })
 }
+
+
+#######################Graph4
+comparison_chart <- function(df, name) {
+  df <- villagerData %>%
+    arrange(Species) %>%
+    select(Species, Personality) %>%
+    filter(Species == name)
+  
+  chart <- ggplot(df, mapping = aes(
+    x = Personality, 
+    y = 1, 
+    fill = Personality
+  )) +
+    geom_col(color = "black", size = 1, alpha = 0.4) +
+    theme_grey() +
+    theme(plot.background = element_rect(fill = "slategray3")) +
+    scale_fill_manual(values = c("red", "blue", "green", "yellow", "orange", "purple", "pink", "grey")) +
+    ggtitle("Different Personalities for Species Types") +
+    xlab("Personality") +
+    ylab("Number") 
+  ggplotly(chart)
+}
+
+server <- function(input, output) {
+  output$compare_one <- renderPlotly({
+    comparison_chart(villagerData, input$species_one)
+  })
+  
+  output$compare_two <- renderPlotly({
+    comparison_chart(villagerData, input$species_two)
+  })
+}
+

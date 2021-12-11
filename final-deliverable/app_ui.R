@@ -4,12 +4,13 @@ library(plotly)
 library(stringr)
 library(shinyjs)
 library(dplyr)
-#######################
+library(shinythemes)
 
+#######################
+villagerData <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/villagers.csv")
 
 ################################################################################################
 Intro <- tabPanel(
-  
   tags$h3(id = "tabs", "Introduction"),
   
   tags$body(
@@ -96,6 +97,41 @@ interactive_three <- tabPanel(
 )
 
 ################
+sorted <- arrange(villagerData, villagerData$Species)
+
+
+interactive_four <- tabPanel(
+  tags$h3(id = "tabs", "example5"),
+  ui <- fluidPage(
+    titlePanel("Trend for Species with Different Personalities"),
+      sidebarPanel(
+        p("Select two different species in the drop down menu's to compare
+         the different amounts of personalites.
+      "),
+        selectInput(
+          inputId = "species_one",
+          label = "Species 1",
+          choices = sorted$Species,
+          selected = sorted[, 1]
+        ),
+        selectInput(
+          inputId = "species_two",
+          label = "Species 2",
+          choices = sorted$Species,
+          selected = sorted[, 1]
+        ),
+        h4("Question:"),
+        p("How are different specie types closely related to real life animals?"),
+        h4("Findings"),
+        p("By looking at the two comparison graphs to the right, you can see how each animal is closely related to their real life character type. Looking more closely, a bull tends to be quite angry (cranky) towards anything and a rabbit tends to be quite lively and high-spirited (peppy) at times.")
+      ),
+      mainPanel(
+        plotlyOutput("compare_one", height = 300, width = 800),
+        plotlyOutput("compare_two", height = 300, width = 800)
+      )
+  )
+)
+################
 Takeaways <- tabPanel(
   
   tags$h3(id = "tabs", "What we have learn from our data"),
@@ -143,10 +179,12 @@ Takeaways <- tabPanel(
 
 ################################################################################################
 ui <- navbarPage(
+  theme = shinytheme("superhero"),
   title = NULL,
   Intro, 
   interactive_one,
   interactive_two,
   interactive_three,
+  interactive_four,
   Takeaways
 )
