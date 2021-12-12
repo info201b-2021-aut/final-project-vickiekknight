@@ -3,14 +3,18 @@ library(ggplot2)
 library(plotly)
 library(stringr)
 library(shinyjs)
-library(dplyr)
-library(shinythemes)
+library(shiny)
+library(png)
+library(tidyr) 
+library(tidyverse)
 
 #######################
+fishdata <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/fish.csv", encoding = "UTF-8")
 villagerData <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/villagers.csv")
 
 ################################################################################################
 Intro <- tabPanel(
+  
   tags$h3(id = "tabs", "Introduction"),
   
   tags$body(
@@ -52,14 +56,46 @@ Intro <- tabPanel(
 
 
 ################
+sorted <- arrange(villagerData, villagerData$Species)
+
+
 interactive_one <- tabPanel(
-  tags$h3(id = "tabs", "example2"),
+  tags$h3(id = "tabs", "Chart1"),
+  ui <- fluidPage(
+    titlePanel("Trend for Species with Different Personalities"),
+    sidebarPanel(
+      p("Select two different species in the drop down menu's to compare
+         the different amounts of personalites.
+      "),
+      selectInput(
+        inputId = "species_one",
+        label = "Species 1",
+        choices = sorted$Species,
+        selected = sorted[, 1]
+      ),
+      selectInput(
+        inputId = "species_two",
+        label = "Species 2",
+        choices = sorted$Species,
+        selected = sorted[, 1]
+      ),
+      h4("Question:"),
+      p("How are different specie types closely related to real life animals?"),
+      h4("Findings"),
+      p("By looking at the two comparison graphs to the right, you can see how each animal is closely related to their real life character type. Looking more closely, a bull tends to be quite angry (cranky) towards anything and a rabbit tends to be quite lively and high-spirited (peppy) at times.")
+    ),
+    mainPanel(
+      plotlyOutput("compare_one", height = 300, width = 800),
+      plotlyOutput("compare_two", height = 300, width = 800)
+    )
+  )
 )
+  
 
 ################
 interactive_two <- tabPanel(
-  tags$h3(id = "tabs", "example3"),
-  ui = fluidPage(
+  tags$h3(id = "tabs", "Chart2"),
+  ui <- fluidPage(
     
     #App name
     
@@ -78,7 +114,7 @@ interactive_two <- tabPanel(
 
 ################
 interactive_three <- tabPanel(
-  tags$h3(id = "tabs", "example4"),
+  tags$h3(id = "tabs", "chart3"),
   ui <- fluidPage(
     
     # Application title
@@ -86,6 +122,7 @@ interactive_three <- tabPanel(
     
     # Sidebar with a slider input for type of pattern  
     useShinyjs(),
+    
     selectizeInput("pattern", "type of pattern:",
                    choices = list("random",
                                   "large_spike",
@@ -96,41 +133,6 @@ interactive_three <- tabPanel(
   )
 )
 
-################
-sorted <- arrange(villagerData, villagerData$Species)
-
-
-interactive_four <- tabPanel(
-  tags$h3(id = "tabs", "example5"),
-  ui <- fluidPage(
-    titlePanel("Trend for Species with Different Personalities"),
-      sidebarPanel(
-        p("Select two different species in the drop down menu's to compare
-         the different amounts of personalites.
-      "),
-        selectInput(
-          inputId = "species_one",
-          label = "Species 1",
-          choices = sorted$Species,
-          selected = sorted[, 1]
-        ),
-        selectInput(
-          inputId = "species_two",
-          label = "Species 2",
-          choices = sorted$Species,
-          selected = sorted[, 1]
-        ),
-        h4("Question:"),
-        p("How are different specie types closely related to real life animals?"),
-        h4("Findings"),
-        p("By looking at the two comparison graphs to the right, you can see how each animal is closely related to their real life character type. Looking more closely, a bull tends to be quite angry (cranky) towards anything and a rabbit tends to be quite lively and high-spirited (peppy) at times.")
-      ),
-      mainPanel(
-        plotlyOutput("compare_one", height = 300, width = 800),
-        plotlyOutput("compare_two", height = 300, width = 800)
-      )
-  )
-)
 ################
 Takeaways <- tabPanel(
   
@@ -147,18 +149,16 @@ Takeaways <- tabPanel(
     tags$main(
       
       tags$section(
-        tags$h3("Where is the best location to catch your favorites insects in the animal crossing?"),
-        tags$p("According to what we have found out there, we have got the trend of what kind 
-                of insects are drawn to different places. Other players can use this information
-                to learn and find out the best location to catch their favorites insects in the areas. "),
+        tags$h3("How are different specie types closely related to real life animals?"),
+        tags$p("By looking at the two comparison graphs to the right, you can see how each animal is closely related to their real life character type. Looking more closely, a bull tends to be quite angry (cranky) towards anything and a rabbit tends to be quite lively and high-spirited (peppy) at times."),
         tags$hr()
       ),
       
       tags$section(
-        tags$h3("Where is the best location to find the most valuable fish in the animal crossing?"),
-        tags$p("By looking at the trend that we have put into the interactive pages. We have know that the
-              (fish) has the most valuable to catach in this game. It can make the player to have the most 
-              benfits in this game."),
+        tags$h3("What frequency is about the different type of fish's shadow?"),
+        tags$p("By looking at the trend that we have put into the interactive pages. We have know differetn 
+               location will cause the fish has different frequency and shadow. The some of the fish like 
+               Pier fish and mouth fish has less shadow type than others"),
         tags$hr()
       ),
       
@@ -179,12 +179,10 @@ Takeaways <- tabPanel(
 
 ################################################################################################
 ui <- navbarPage(
-  theme = shinytheme("superhero"),
   title = NULL,
   Intro, 
   interactive_one,
   interactive_two,
   interactive_three,
-  interactive_four,
   Takeaways
 )
