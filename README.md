@@ -1,6 +1,7 @@
 # Final-Project-Animal_Crossing:New_Horizons
 
-This is where you will create your Github repo for your final project. Instructions are on Canvas!
+## **Final outcome**
+https://bcccp.shinyapps.io/test_1/
 
 ## **Domain of Interest**
 
