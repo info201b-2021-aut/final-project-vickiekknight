@@ -7,6 +7,7 @@ library(shiny)
 library(png)
 library(tidyr) 
 library(tidyverse)
+library(shinythemes)
 
 #######################
 fishdata <- read.csv("https://raw.githubusercontent.com/info201b-2021-aut/final-project-vickiekknight/main/data/fish.csv", encoding = "UTF-8")
@@ -179,6 +180,7 @@ Takeaways <- tabPanel(
 
 ################################################################################################
 ui <- navbarPage(
+  theme = shinytheme("superhero"),
   title = NULL,
   Intro, 
   interactive_one,
